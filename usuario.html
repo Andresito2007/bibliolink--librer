@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIBLIOLINK - Usuarios</title>
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+    
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">
+          <span class="logo-icon">🏛️</span>
+          <span>BIBLIOLINK</span>
+        </a>
+        
+        <button class="navbar-toggle" id="navbar-toggle">
+          ☰ 
+        </button>
+        
+        <ul class="navbar-menu" id="navbar-menu">
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link">
+               Inicio
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="usuario.html" class="navbar-link active">
+               Usuarios
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="libros.html" class="navbar-link">
+                Libros
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="reservas.html" class="navbar-link">
+                Reservas
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="main-container">
+      <!-- COLUMNA IZQUIERDA - FORMULARIOS -->
+      <div class="left-column">
+        <h1> GESTION DE USUARIOS</h1>
+        <p class="bienvenida">Administra los usuarios de tu biblioteca <br>Crea, edita y elimina registros fácilmente</p>
+    
+        <!-- BUSCAR USUARIO -->
+        <div class="container get-section">
+          <h2> BUSCAR USUARIO</h2>
+          <form id="getUsuario">
+            <label for="idGet">ID del Usuario</label>
+            <input type="text" name="idUsuarioGet" id="idGet" placeholder="Ingrese el ID" required />
+            <input type="submit" value="Buscar Usuario" />
+          </form>
+          <div class="resultado" id="textoGet">La información aparecerá aquí</div>
+        </div>
+
+        <!-- REGISTRAR USUARIO -->
+        <div class="container post-section">
+          <h2> REGISTRAR USUARIO</h2>
+          <form id="postUsuario">
+            <label for="nombrePost">Nombre Completo</label>
+            <input type="text" name="nombrePost" id="nombrePost" placeholder="Ej: Juan Pérez" required />
+            
+            <label for="emailPost">Email</label>
+            <input type="email" name="emailPost" id="emailPost" placeholder="Ej: juan@email.com" required />
+            
+            <label for="telefonoPost">Teléfono</label>
+            <input type="text" name="telefonoPost" id="telefonoPost" placeholder="Ej: 987654321" required />
+            
+            <input type="submit" value="Registrar Usuario" />
+          </form>
+          <div class="resultado" id="textoPost">El resultado aparecerá aquí</div>
+        </div>
+
+        <!-- ACTUALIZAR USUARIO -->
+        <div class="container put-section">
+          <h2> ACTUALIZAR USUARIO</h2>
+          <form id="putUsuario">
+            <label for="idPut">ID del Usuario</label>
+            <input type="text" name="idUsuarioPut" id="idPut" placeholder="ID a actualizar" required />
+            
+            <label for="nombrePut">Nombre Completo</label>
+            <input type="text" name="nombrePut" id="nombrePut" placeholder="Nuevo nombre" required />
+            
+            <label for="emailPut">Email</label>
+            <input type="email" name="emailPut" id="emailPut" placeholder="Nuevo email" required />
+            
+            <label for="telefonoPut">Teléfono</label>
+            <input type="text" name="telefonoPut" id="telefonoPut" placeholder="Nuevo teléfono" required />
+            
+            <label for="estadoPut">Estado</label>
+            <input type="text" name="estadoPut" id="estadoPut" placeholder="activo/inactivo" value="activo" required />
+            
+            <input type="submit" value="Actualizar Usuario" />
+          </form>
+          <div class="resultado" id="textoPut">El resultado aparecerá aquí</div>
+        </div>
+
+        <!-- ELIMINAR USUARIO -->
+        <div class="container delete-section">
+          <h2>ELIMINAR USUARIO</h2>
+          <form id="deleteUsuario">
+            <label for="idDelete">ID del Usuario</label>
+            <input type="text" name="idUsuarioDelete" id="idDelete" placeholder="ID a eliminar" required />
+            <input type="submit" value="Eliminar Usuario" />
+          </form>
+          <div class="resultado" id="textoDelete">El resultado aparecera aqui</div>
+        </div>
+      </div> <!-- FIN left-column -->
+      
+      <!-- COLUMNA DERECHA - IMAGEN -->
+      <div class="right-column"></div>
+      
+    </div>
+
+    <script src="index.js"></script>
+    
+    <!-- Script para el menú hamburguesa en móviles -->
+    <script>
+      const navbarToggle = document.getElementById('navbar-toggle');
+      const navbarMenu = document.getElementById('navbar-menu');
+      
+      navbarToggle.addEventListener('click', () => {
+        navbarMenu.classList.toggle('active');
+      });
+      
+      // Cerrar menú al hacer click en un link
+      document.querySelectorAll('.navbar-link').forEach(link => {
+        link.addEventListener('click', () => {
+          navbarMenu.classList.remove('active');
+        });
+      });
+    </script>
+  </body>
+</html>

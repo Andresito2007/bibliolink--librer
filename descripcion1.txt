@@ -1,0 +1,1 @@
+en el config estaran los archvios de configuracion de la aplicacion de express y de la base de datos

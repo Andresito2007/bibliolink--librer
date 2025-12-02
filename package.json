@@ -1,0 +1,17 @@
+{
+  "name": "biblioink",
+  "version": "1.0.0",
+  "description": "Una bibloteca virtual",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/config/index.js"
+  },
+  "keywords": [],
+  "author": "Andres choqque",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}

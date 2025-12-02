@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIBLIOLINK - Gestion de Libros</title>
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+    <!-- NUESTRA BARRA DE NAVEGACION -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">
+          <span class="logo-icon">🏛️</span>
+          <span>BIBLIOLINK</span>
+        </a>
+        <button class="navbar-toggle" id="navbar-toggle">
+          ☰
+        </button>
+        <ul class="navbar-menu" id="navbar-menu">
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link">
+               Inicio
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="usuario.html" class="navbar-link">
+               Usuarios
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="libros.html" class="navbar-link active">
+               Libros
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="reservas.html" class="navbar-link">
+               Reservas
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="main-container">
+      <!-- COLUMNA IZQUIERDA - FORMULARIOS -->
+      <div class="left-column">
+        <h1> GESTIÓN DE LIBROS</h1>
+        <p class="bienvenida">Administra el catálogo de tu biblioteca 📖<br>Registra, actualiza y controla tu inventario de libros</p>
+    
+        <!-- BUSCAR LIBRO -->
+        <div class="container get-section">
+          <h2> BUSCAR LIBRO</h2>
+          <form id="getLibro">
+            <label for="idGetLibro">ID del Libro</label>
+            <input type="text" name="idLibroGet" id="idGetLibro" placeholder="Ingrese el ID del libro" required />
+            <input type="submit" value="Buscar Libro" />
+          </form>
+          <div class="resultado" id="textoGetLibro">La información aparecerá aquí</div>
+        </div>
+        <div class="container">
+           <h2> REGISTRAR UN NUEVO LIBRO (ACCESO SOLO PARA ADMINISTRADORES)</h2>
+           <input type="password" id="adminPass" placeholder="Ingresa la contraseña">
+           <button id="btnAdmin">INGRESAR CONTRASEÑA</button>
+           <p id="msgAdmin"></p>
+        </div>
+        <!-- REGISTRAR UN NUEVO LIBRO -->
+        <div class="container post-section" id="adminSection" style="display:none;">
+          <h2> REGISTRAR  NUEVO LIBRO</h2>
+          <form id="postLibro">
+            <label for="nombrePostLibro">Nombre del Libro</label>
+            <input type="text" name="nombrePostLibro" id="nombrePostLibro" placeholder="Ej: Cien años de soledad" required />
+            
+            <label for="tipoPostLibro">Tipo de Libro</label>
+            <input type="text" name="tipoPostLibro" id="tipoPostLibro" placeholder="Ej: Ficción, No Ficción, Académico" required />
+            
+            <label for="autorPostLibro">Autor</label>
+            <input type="text" name="autorPostLibro" id="autorPostLibro" placeholder="Ej: Gabriel García Márquez" required />
+            
+            <label for="estadoPostLibro">Estado</label>
+            <input type="text" name="estadoPostLibro" id="estadoPostLibro" placeholder="disponible/prestado/reservado" value="disponible" required />
+            
+            <input type="submit" value="Registrar Libro" />
+          </form>
+          <div class="resultado" id="textoPostLibro">El resultado aparecerá aquí</div>
+        </div>
+
+        <!-- ACTUALIZAR LIBRO -->
+        <div class="container put-section">
+          <h2> ACTUALIZAR LIBRO</h2>
+          <form id="putLibro">
+            <label for="idPutLibro">ID del Libro</label>
+            <input type="text" name="idLibroPut" id="idPutLibro" placeholder="ID a actualizar" required />
+            
+            <label for="nombrePutLibro">Nombre del Libro</label>
+            <input type="text" name="nombrePutLibro" id="nombrePutLibro" placeholder="Nuevo nombre" required />
+            
+            <label for="tipoPutLibro">Tipo de Libro</label>
+            <input type="text" name="tipoPutLibro" id="tipoPutLibro" placeholder="Nuevo tipo" required />
+            
+            <label for="autorPutLibro">Autor</label>
+            <input type="text" name="autorPutLibro" id="autorPutLibro" placeholder="Nuevo autor" required />
+            
+            <label for="estadoPutLibro">Estado</label>
+            <input type="text" name="estadoPutLibro" id="estadoPutLibro" placeholder="disponible/prestado/reservado" required />
+            
+            <input type="submit" value="Actualizar Libro" />
+          </form>
+          <div class="resultado" id="textoPutLibro">El resultado aparecerá aquí</div>
+        </div>
+
+        <!-- ELIMINAR LIBRO -->
+        <div class="container delete-section">
+          <h2> ELIMINAR LIBRO</h2>
+          <form id="deleteLibro">
+            <label for="idDeleteLibro">ID del Libro</label>
+            <input type="text" name="idLibroDelete" id="idDeleteLibro" placeholder="ID a eliminar" required />
+            <input type="submit" value="Eliminar Libro" />
+          </form>
+          <div class="resultado" id="textoDeleteLibro">El resultado aparecerá aquí</div>
+        </div>
+      </div> <!-- FIN left-column -->
+      
+      <!--  EN LA COLUMNA DERECHA - NUESTRA IMAGEN -->
+      <div class="right-column"></div>
+      
+    </div> <!-- FIN main-container -->
+
+    <script src="index2.js"></script>
+    <!-- Script para el menu hamburguesa para moviles -->
+    <script>
+      const navbarToggle = document.getElementById('navbar-toggle');
+      const navbarMenu = document.getElementById('navbar-menu');
+      
+      navbarToggle.addEventListener('click', () => {
+        navbarMenu.classList.toggle('active');
+      });
+      // Cerrar menú al hacer click en un link
+      document.querySelectorAll('.navbar-link').forEach(link => {
+        link.addEventListener('click', () => {
+          navbarMenu.classList.remove('active');
+        });
+      });
+    </script>
+  </body>
+</html>

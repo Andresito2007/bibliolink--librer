@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIBLIOLINK - Reservas</title>
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+    
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">
+          <span class="logo-icon">🏛️</span>
+          <span>BIBLIOLINK</span>
+        </a>
+        
+        <button class="navbar-toggle" id="navbar-toggle">
+          ☰
+        </button>
+        
+        <ul class="navbar-menu" id="navbar-menu">
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link">
+              🏠 Inicio
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="usuario.html" class="navbar-link">
+              👥 Usuarios
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="libros.html" class="navbar-link">
+              📚 Libros
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="reservas.html" class="navbar-link active">
+              📋 Reservas
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="main-container">
+      <!-- COLUMNA IZQUIERDA - FORMULARIOS -->
+      <div class="left-column">
+        <h1> GESTIÓN DE RESERVAS</h1>
+        <p class="bienvenida">Administra las reservas de libros 📖<br>Reserva y cancela préstamos de manera fácil</p>
+    
+        <!-- BUSCAR RESERVA -->
+        <div class="container get-section">
+          <h2>🔍 BUSCAR RESERVA</h2>
+          <form id="getReserva">
+            <label for="idGetReserva">ID de la Reserva</label>
+            <input type="text" name="idReservaGet" id="idGetReserva" placeholder="Ingrese el ID de la reserva" required />
+            <input type="submit" value="Buscar Reserva" />
+          </form>
+          <div class="resultado" id="textoGetReserva">La información aparecerá aquí</div>
+        </div>
+
+        <!-- CREAR RESERVA -->
+        <div class="container post-section">
+          <h2>➕ CREAR RESERVA</h2>
+          <form id="postReserva">
+            <label for="usuarioIdPost">ID del Usuario</label>
+            <input type="text" name="usuarioIdPost" id="usuarioIdPost" placeholder="Ej: 1" required />
+            
+            <label for="libroIdPost">ID del Libro</label>
+            <input type="text" name="libroIdPost" id="libroIdPost" placeholder="Ej: 5" required />
+            
+            <label for="fechaReservaPost">Fecha de Reserva</label>
+            <input type="date" name="fechaReservaPost" id="fechaReservaPost" required />
+            
+            <label for="fechaDevolucionPost">Fecha de Devolución</label>
+            <input type="date" name="fechaDevolucionPost" id="fechaDevolucionPost" required />
+            
+            <input type="submit" value="Crear Reserva" />
+          </form>
+          <div class="resultado" id="textoPostReserva">El resultado aparecerá aquí</div>
+        </div>
+
+        <!-- LISTAR TODAS LAS RESERVAS -->
+        <div class="container" style="border-left: 5px solid #17a2b8;">
+          <h2 style="color: #17a2b8; border-bottom-color: #17a2b8;">📊 LISTAR TODAS LAS RESERVAS</h2>
+          <button id="btnListarReservas" style="background: linear-gradient(45deg, #17a2b8, #138496); width: 100%; padding: 14px; border: none; border-radius: 10px; color: white; font-size: 1.1rem; font-weight: 700; cursor: pointer; margin-top: 10px;">
+            Ver Todas las Reservas
+          </button>
+          <div class="resultado" id="textoListarReservas" style="max-height: 400px; overflow-y: auto;">
+            Las reservas aparecerán aquí
+          </div>
+        </div>
+
+        <!-- ACTUALIZAR RESERVA -->
+        <div class="container put-section">
+          <h2>✏️ ACTUALIZAR RESERVA</h2>
+          <form id="putReserva">
+            <label for="idPutReserva">ID de la Reserva</label>
+            <input type="text" name="idReservaPut" id="idPutReserva" placeholder="ID a actualizar" required />
+            
+            <label for="usuarioIdPut">ID del Usuario</label>
+            <input type="text" name="usuarioIdPut" id="usuarioIdPut" placeholder="Nuevo ID de usuario" required />
+            
+            <label for="libroIdPut">ID del Libro</label>
+            <input type="text" name="libroIdPut" id="libroIdPut" placeholder="Nuevo ID de libro" required />
+            
+            <label for="fechaReservaPut">Fecha de Reserva</label>
+            <input type="date" name="fechaReservaPut" id="fechaReservaPut" required />
+            
+            <label for="fechaDevolucionPut">Fecha de Devolución</label>
+            <input type="date" name="fechaDevolucionPut" id="fechaDevolucionPut" required />
+            
+            <label for="estadoPut">Estado</label>
+            <select name="estadoPut" id="estadoPut" style="width: 100%; padding: 12px 15px; margin-top: 8px; border: 2px solid #F5E6D3; border-radius: 8px; font-size: 1rem; background: rgba(255, 255, 255, 0.8);">
+              <option value="activa">Activa</option>
+              <option value="completada">Completada</option>
+              <option value="cancelada">Cancelada</option>
+            </select>
+            
+            <input type="submit" value="Actualizar Reserva" />
+          </form>
+          <div class="resultado" id="textoPutReserva">El resultado aparecerá aquí</div>
+        </div>
+
+        <!-- CANCELAR RESERVA -->
+        <div class="container delete-section">
+          <h2>🗑️ CANCELAR RESERVA</h2>
+          <form id="deleteReserva">
+            <label for="idDeleteReserva">ID de la Reserva</label>
+            <input type="text" name="idReservaDelete" id="idDeleteReserva" placeholder="ID a cancelar" required />
+            <input type="submit" value="Cancelar Reserva" />
+          </form>
+          <div class="resultado" id="textoDeleteReserva">El resultado aparecerá aquí</div>
+        </div>
+      </div> <!-- FIN left-column -->
+      
+      <!-- COLUMNA DERECHA - IMAGEN -->
+      <div class="right-column"></div>
+      
+    </div> <!-- FIN main-container -->
+
+    <script src="index3.js"></script>
+    
+    <!-- Script para el menú hamburguesa en móviles -->
+    <script>
+      const navbarToggle = document.getElementById('navbar-toggle');
+      const navbarMenu = document.getElementById('navbar-menu');
+      
+      navbarToggle.addEventListener('click', () => {
+        navbarMenu.classList.toggle('active');
+      });
+      
+      // Cerrar menú al hacer click en un link
+      document.querySelectorAll('.navbar-link').forEach(link => {
+        link.addEventListener('click', () => {
+          navbarMenu.classList.remove('active');
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es"> <!--EL LENGUAJE QUE USAMOS-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIBLIOLINK - Catálogo</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <!-- NUESTRA BARRA DE NAVEGACIÓN -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">
+        <span class="logo-icon">🏛️</span>
+        <span>BIBLIOLINK</span>
+      </a>
+      <button class="navbar-toggle" id="navbar-toggle">
+        ☰
+      </button>
+      <ul class="navbar-menu" id="navbar-menu">
+        <li class="navbar-item">
+          <a href="index.html" class="navbar-link active">
+             Inicio
+          </a>
+        </li>
+        <li class="navbar-item">
+          <a href="usuario.html" class="navbar-link">
+             Usuarios
+          </a>
+        </li>
+        <li class="navbar-item">
+          <a href="libros.html" class="navbar-link">
+             Libros
+          </a>
+        </li>
+        <li class="navbar-item">
+          <a href="reservas.html" class="navbar-link">
+             Reservas
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <h1>🏛️ BIBLIOLINK</h1>
+    <p>Este sistema te permitira gestionar libros, usuarios y reservas de la biblioteca.
+       Puede ver nuestra seccion de libros</p>
+    <p style="font-size: 1rem;"></p>
+  </section>
+  <!--  NUESTRA SECCION DE CATALOGO DE LIBROS -->
+  <div class="catalogo-container">
+    <div class="seccion-titulo">
+      <h2> CATALOGO DISPONIBLE</h2>
+    </div>
+    <div class="libros-grid">
+      <!-- Libro 1 -->
+      <div class="libro-card">
+        <div class="libro-imagen">
+          <img src="https://images.cdn3.buscalibre.com/fit-in/360x360/61/8d/618d227e8967274cd9589a549adff52d.jpg" alt="Cien Años de Soledad">
+        </div>
+        <div class="libro-info">
+          <span class="libro-id">ID:1</span>
+          <h3 class="libro-titulo">(1)Cien Años de Soledad</h3>
+          <p class="libro-autor">Gabriel García Márquez</p>
+          <span class="libro-tipo">Ficción</span>
+          <p class="libro-descripcion">Una obra maestra del realismo mágico que narra la historia de la familia Buendía en Macondo.</p>
+          <div class="libro-estado">
+            <span class="estado-badge disponible">Disponible</span>
+          </div>
+        </div>
+      </div>
+      <!-- Libro 2 -->
+      <div class="libro-card">
+        <div class="libro-imagen">
+          <img src="https://th.bing.com/th/id/OIP.I8v7RbjLmDNdhDSh_qJVKQHaJl?w=203&h=263&c=7&r=0&o=7&pid=1.7&rm=3" alt="Don Quijote">
+        </div>
+        <div class="libro-info">
+          <span class="libro-id">ID:2</span>
+          <h3 class="libro-titulo">(2)Don Quijote de la Mancha</h3>
+          <p class="libro-autor">Miguel de Cervantes</p>
+          <span class="libro-tipo">Clásico</span>
+          <p class="libro-descripcion">Las aventuras del ingenioso hidalgo y su fiel escudero Sancho Panza en tierras españolas.</p>
+          <div class="libro-estado">
+            <span class="estado-badge disponible">✓ Disponible</span>
+          </div>
+        </div>
+      </div>
+      <!-- Libro 3 -->
+      <div class="libro-card">
+        <div class="libro-imagen">
+          <img src="https://th.bing.com/th/id/OIP.WFmPbD63dF0jAWSDJF8v9QHaLI?w=203&h=306&c=7&r=0&o=7&pid=1.7&rm=3" alt="Breve Historia del Tiempo">
+        </div>
+        <div class="libro-info">
+          <span class="libro-id">ID:3</span>
+          <h3 class="libro-titulo">(3)Breve Historia del Tiempo</h3>
+          <p class="libro-autor">Stephen Hawking</p>
+          <span class="libro-tipo">Ciencia</span>
+          <p class="libro-descripcion">Una exploración fascinante del universo, desde el Big Bang hasta los agujeros negros.</p>
+          <div class="libro-estado">
+            <span class="estado-badge prestado">⏳ Prestado</span>
+          </div>
+        </div>
+      </div>
+      <!-- Libro 4 -->
+      <div class="libro-card">
+          <div class="libro-imagen">
+          <img src="https://th.bing.com/th/id/OIP.8bTpGDLEYVpDlV8tD10XlQHaMF?w=115&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="1984">
+          </div>
+        <div class="libro-info">
+          <span class="libro-id">ID:4</span>
+          <h3 class="libro-titulo">(4) 1984</h3>
+          <p class="libro-autor">George Orwell</p>
+          <span class="libro-tipo">Distopía</span>
+          <p class="libro-descripcion">Una visión aterradora de un futuro totalitario donde el Gran Hermano todo lo controla.</p>
+          <div class="libro-estado">
+            <span class="estado-badge disponible">✓ Disponible</span>
+          </div>
+        </div>
+      </div>
+      <!-- Libro 5 -->
+      <div class="libro-card">
+         <div class="libro-imagen">
+          <img src="https://th.bing.com/th/id/OIP.heYI6pChBAHzWEKurAUYhQHaJk?w=203&h=263&c=7&r=0&o=7&pid=1.7&rm=3" alt="1984">
+        </div>
+      <div class="libro-info">
+          <span class="libro-id">ID:5</span>
+          <h3 class="libro-titulo">(5)Crimen y Castigo</h3>
+          <p class="libro-autor">Fyodor Dostoievski</p>
+          <span class="libro-tipo">Psicológico</span>
+          <p class="libro-descripcion">La lucha interna de Raskolnikov después de cometer un asesinato en San Petersburgo.</p>
+          <div class="libro-estado">
+            <span class="estado-badge disponible">✓ Disponible</span>
+          </div>
+        </div>
+      </div>
+      <!-- Libro 6 -->
+      <div class="libro-card">
+         <div class="libro-imagen">
+          <img src="https://th.bing.com/th/id/OIP.Cb4_JkLC0ur-t15j-woO2AHaKZ?w=145&h=202&c=7&r=0&o=7&pid=1.7&rm=3" alt="1984">
+         </div>
+      <div class="libro-info">
+          <span class="libro-id">ID:6</span>
+          <h3 class="libro-titulo">(6)El Principito</h3>
+          <p class="libro-autor">Antoine de Saint-Exupéry</p>
+          <span class="libro-tipo">Infantil</span>
+          <p class="libro-descripcion">Un pequeño príncipe viaja por diferentes planetas aprendiendo sobre la vida y el amor.</p>
+          <div class="libro-estado">
+            <span class="estado-badge disponible">✓ Disponible</span>
+          </div>
+        </div>
+      </div>
+      <!-- Libro 7 -->
+      <div class="libro-card">
+         <div class="libro-imagen">
+          <img src="https://th.bing.com/th/id/OIP.p27mDzGrWahqyr1K-qYnLQHaH9?w=152&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="1984">
+         </div>
+        <div class="libro-info">
+          <span class="libro-id">ID:7</span>
+          <h3 class="libro-titulo">(7)Romeo y Julieta</h3>
+          <p class="libro-autor">William Shakespeare</p>
+          <span class="libro-tipo">Drama</span>
+          <p class="libro-descripcion">La trágica historia de amor entre dos jóvenes de familias enemigas en Verona.</p>
+          <div class="libro-estado">
+            <span class="estado-badge reservado">🔒 Reservado</span>
+          </div>
+        </div>
+      </div>
+      <!-- Libro 8 -->
+      <div class="libro-card">
+          <div class="libro-imagen">
+          <img src="https://th.bing.com/th/id/OIP._mzf6KMpKYY42Wg9LqwIzgHaHa?w=156&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="1984">
+         </div>
+        <div class="libro-info">
+          <span class="libro-id">ID:8</span>
+          <h3 class="libro-titulo">(8)El Señor de los Anillos</h3>
+          <p class="libro-autor">J.R.R. Tolkien</p>
+          <span class="libro-tipo">Fantasía</span>
+          <p class="libro-descripcion">La épica aventura de Frodo para destruir el Anillo Único en la Tierra Media.</p>
+          <div class="libro-estado">
+            <span class="estado-badge disponible">✓ Disponible</span>
+          </div>
+        </div>
+      </div>
+      <!-- Libro 9 -->
+      <div class="libro-card">
+          <div class="libro-imagen">
+           <img src="https://th.bing.com/th/id/OIP.9cpx5odrHhsHt5FJzfzjKAHaLl?w=115&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="1984">
+          </div>
+        <div class="libro-info">
+          <span class="libro-id">ID:9</span>
+          <h3 class="libro-titulo">(9)Sherlock Holmes</h3>
+          <p class="libro-autor">Arthur Conan Doyle</p>
+          <span class="libro-tipo">Misterio</span>
+          <p class="libro-descripcion">Las increíbles aventuras del famoso detective y su fiel compañero Watson.</p>
+          <div class="libro-estado">
+            <span class="estado-badge disponible">✓ Disponible</span>
+          </div>
+        </div>
+      </div>
+      <!-- Libro 10 -->
+      <div class="libro-card">
+          <div class="libro-imagen">
+           <img src="https://th.bing.com/th/id/OIP.ZJ0D4YY1WDvkB-9HImJ7NgHaMK?w=115&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="1984">
+          </div>
+       <div class="libro-info">
+          <span class="libro-id">ID:10</span>
+          <h3 class="libro-titulo">(10)Moby Dick</h3>
+          <p class="libro-autor">Herman Melville</p>
+          <span class="libro-tipo">Aventura</span>
+          <p class="libro-descripcion">La obsesiva búsqueda del Capitán Ahab de la gran ballena blanca.</p>
+          <div class="libro-estado">
+            <span class="estado-badge prestado">Prestado</span>
+          </div>
+        </div>
+      </div>
+      <!-- Libro 11 -->
+      <div class="libro-card">
+         <div class="libro-imagen">
+           <img src="https://th.bing.com/th/id/OIP.LmTDA02aFVhnVlrmMpCYWAHaLb?w=115&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="1984">
+          </div>
+        <div class="libro-info">
+          <span class="libro-id">ID:11</span>
+          <h3 class="libro-titulo">(11)Padre Rico, Padre Pobre</h3>
+          <p class="libro-autor">Robert Kiyosaki</p>
+          <span class="libro-tipo">Negocios</span>
+          <p class="libro-descripcion">Lecciones sobre finanzas personales e inversión para alcanzar la libertad financiera.</p>
+          <div class="libro-estado">
+            <span class="estado-badge disponible">✓ Disponible</span>
+          </div>
+        </div>
+      </div>
+      <!-- Libro 12 -->
+      <div class="libro-card">
+          <div class="libro-imagen">
+           <img src="https://th.bing.com/th/id/OIP.pfgjKrf-kzsQNdJ3qeKjFAHaHa?w=214&h=213&c=7&r=0&o=7&pid=1.7&rm=3" alt="1984">
+          </div>
+        <div class="libro-info">
+          <span class="libro-id">ID:12</span>
+          <h3 class="libro-titulo">(12)El Hombre en Busca de Sentido</h3>
+          <p class="libro-autor">Viktor Frankl</p>
+          <span class="libro-tipo">Psicología</span>
+          <p class="libro-descripcion">Las experiencias del autor en campos de concentración y su teoría sobre la logoterapia.</p>
+          <div class="libro-estado">
+            <span class="estado-badge disponible">✓ Disponible</span>
+          </div>
+        </div>
+      </div>
+      <!-- Libro 13 -->
+      <div class="libro-card">
+         <div class="libro-imagen">
+           <img src="https://th.bing.com/th/id/OIP.RUF0RmAI2ovMbEgeWYmy1wHaLS?w=202&h=308&c=7&r=0&o=7&pid=1.7&rm=3" alt="1984">
+          </div>
+        <div class="libro-info">
+          <span class="libro-id">ID:13</span>
+          <h3 class="libro-titulo">(13)La Odisea</h3>
+          <p class="libro-autor">Homero</p>
+          <span class="libro-tipo">Épico</span>
+          <p class="libro-descripcion">El largo viaje de Odiseo de regreso a Ítaca tras la Guerra de Troya.</p>
+          <div class="libro-estado">
+            <span class="estado-badge disponible">✓ Disponible</span>
+          </div>
+        </div>
+      </div>
+      <!-- Libro 14 -->
+      <div class="libro-card">
+          <div class="libro-imagen">
+           <img src="https://th.bing.com/th/id/OIP.4q4Pp0aTbjvCRBpIU2DW8gHaLE?w=203&h=304&c=7&r=0&o=7&pid=1.7&rm=3" alt="1984">
+          </div>
+        <div class="libro-info">
+          <span class="libro-id">ID:14</span>
+          <h3 class="libro-titulo">(14)El Retrato de Dorian Gray</h3>
+          <p class="libro-autor">Oscar Wilde</p>
+          <span class="libro-tipo">Filosófico</span>
+          <p class="libro-descripcion">Un joven vende su alma para mantener su belleza mientras su retrato envejece.</p>
+          <div class="libro-estado">
+            <span class="estado-badge reservado">🔒 Reservado</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Libro 15 -->
+      <div class="libro-card">
+           <div class="libro-imagen">
+           <img src="https://th.bing.com/th/id/OIP.UfyxRwSpFEaUWd2WxpswJgHaLJ?w=115&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="1984">
+          </div>
+       <div class="libro-info">
+          <span class="libro-id">ID:15</span>
+          <h3 class="libro-titulo">(15)Orgullo y Prejuicio</h3>
+          <p class="libro-autor">Jane Austen</p>
+          <span class="libro-tipo">Romance</span>
+          <p class="libro-descripcion">La compleja relación entre Elizabeth Bennet y el orgulloso Mr. Darcy.</p>
+          <div class="libro-estado">
+            <span class="estado-badge disponible">✓ Disponible</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Libro 16 -->
+      <div class="libro-card">
+          <div class="libro-imagen">
+           <img src="https://th.bing.com/th/id/OIP.kvlzueJY-nEHmNc6OI-VHgHaLA?w=122&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="1984">
+          </div>
+        <div class="libro-info">
+          <span class="libro-id">ID:16</span>
+          <h3 class="libro-titulo">(16)El Código Da Vinci</h3>
+          <p class="libro-autor">Dan Brown</p>
+          <span class="libro-tipo">Thriller</span>
+          <p class="libro-descripcion">Un simbologista descifra pistas ocultas en obras de arte de Leonardo Da Vinci.</p>
+          <div class="libro-estado">
+            <span class="estado-badge disponible">Disponible</span>
+          </div>
+        </div>
+      </div>
+      <!-- Libro 17 -->
+      <div class="libro-card">
+         <div class="libro-imagen">
+           <img src="https://th.bing.com/th/id/OIP.EN8YQyvdYoBPJhIh560s7AHaKL?w=203&h=279&c=7&r=0&o=7&pid=1.7&rm=3" alt="1984">
+         </div> 
+       <div class="libro-info">
+          <span class="libro-id">ID:17</span>
+          <h3 class="libro-titulo">(17)La Vuelta al Mundo en 80 Días</h3>
+          <p class="libro-autor">Julio Verne</p>
+          <span class="libro-tipo">Aventura</span>
+          <p class="libro-descripcion">Phileas Fogg apuesta que puede dar la vuelta al mundo en solo 80 días.</p>
+          <div class="libro-estado">
+            <span class="estado-badge prestado">⏳ Prestado</span>
+          </div>
+        </div>
+      </div>
+      <!-- Libro 18 -->
+      <div class="libro-card">
+          <div class="libro-imagen">
+           <img src="https://th.bing.com/th/id/OIP.21c95OiTlaEC5T4PqfGr1AHaLP?w=202&h=307&c=7&r=0&o=7&pid=1.7&rm=3" alt="1984">
+         </div> 
+        <div class="libro-info">
+          <span class="libro-id">ID:18</span>
+          <h3 class="libro-titulo">(18)Matar a un Ruiseñor</h3>
+          <p class="libro-autor">Harper Lee</p>
+          <span class="libro-tipo">Drama</span>
+          <p class="libro-descripcion">Una historia sobre racismo y justicia en el sur de Estados Unidos.</p>
+          <div class="libro-estado">
+            <span class="estado-badge disponible">✓ Disponible</span>
+          </div>
+        </div>
+      </div>
+      <!-- Libro 19 -->
+      <div class="libro-card">
+         <div class="libro-imagen">
+           <img src="https://th.bing.com/th/id/OIP.WFs2UxmYzXJkgT-pv87gcQHaLH?w=111&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="1984">
+           </div> 
+        <div class="libro-info">
+          <span class="libro-id">ID:19</span>
+          <h3 class="libro-titulo">(19)Harry Potter y la Piedra Filosofal</h3>
+          <p class="libro-autor">J.K. Rowling</p>
+          <span class="libro-tipo">Fantasía</span>
+          <p class="libro-descripcion">Un niño descubre que es mago y comienza su aventura en Hogwarts.</p>
+          <div class="libro-estado">
+            <span class="estado-badge disponible">✓ Disponible</span>
+          </div>
+        </div>
+      </div>
+      <!-- Libro 20 -->
+      <div class="libro-card">
+           <div class="libro-imagen">
+           <img src="https://th.bing.com/th/id/OIP.JX9ZD3YtrJD-IZPZ6j915wHaKp?w=119&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="1984">
+           </div> 
+        <div class="libro-info">
+          <span class="libro-id">ID:20</span>
+          <h3 class="libro-titulo">(20)Sapiens</h3>
+          <p class="libro-autor">Yuval Noah Harari</p>
+          <span class="libro-tipo">Historia</span>
+          <p class="libro-descripcion">Una historia de la humanidad desde la edad de piedra hasta la era moderna.</p>
+          <div class="libro-estado">
+            <span class="estado-badge disponible">✓ Disponible</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p><strong>🏛️ BIBLIOLINK</strong> - La mejor biblioteca del Peru</p>
+    <p>📞 Teléfono: 996198 | 📧 Correo: andresito@gmail.com</p>
+    <p>📍 Lima, Perú | ©Todos los derechos reservados</p>
+  </footer>
+  <!-- Script para el menú hamburguesa -->
+  <script>
+    const navbarToggle = document.getElementById('navbar-toggle');
+    const navbarMenu = document.getElementById('navbar-menu');
+    
+    navbarToggle.addEventListener('click', () => {
+      navbarMenu.classList.toggle('active');
+    });
+    
+    document.querySelectorAll('.navbar-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navbarMenu.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
